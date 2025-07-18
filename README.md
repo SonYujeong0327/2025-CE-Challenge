@@ -41,7 +41,7 @@ git clone https://github.com/[your_github_id]/2025
 To run end-to-end build and test script, go to the repository and run the script in docker:
 ```
 cd [path_to_repo]
-./build_and_test.sh
+bash build_and_test.sh
 ```
 
 ## Build and Test
