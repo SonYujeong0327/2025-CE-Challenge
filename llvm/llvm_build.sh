@@ -1,8 +1,7 @@
 #!/bin/bash
 
 mkdir -p build
-cmake -G Ninja -S llvm -B build \ 
-	-DCMAKE_BUILD_TYPE=Release \
+cmake -G Ninja -S llvm -B build -DCMAKE_BUILD_TYPE=Release \
 	-DLLVM_TARGETS_TO_BUILD="RISCV;host" \
 	-DLLVM_ENABLE_PROJECTS="clang;lld" \
 	-DLLVM_DEFAULT_TARGET_TRIPLE="riscv64-unknown-linux-gnu" \
