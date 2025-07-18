@@ -1,0 +1,5 @@
+bfs u 12 10
+bc u 10 10
+cc u 10 10
+cc_sv u 10 10
+sssp u 8 10

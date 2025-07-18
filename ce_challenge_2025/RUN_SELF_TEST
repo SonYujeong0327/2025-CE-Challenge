@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# This is an example script for executing self test that will execute all the benchmarks once.
+# The score reported in this test will not be an exact match to the leaderboard, but it will be a
+# good representation of how your branch predictor & compiler might perform
+
+
+echo "==== SELF TEST EXECUTION START ===="
+
+echo GAP_BINARY_PATH:  ${GAP_BINARY_PATH}
+echo TSVC_BINARY_PATH: ${TSVC_BINARY_PATH}
+echo ""
+
+PRED="MyBP"
+NUM_THREADS=8
+
+OUT_PATH="out/SELF_TEST"
+
+echo "Running ${PRED} predictor, using ${NUM_THREADS} threads"
+echo "Starting with GAP Benchmarks..."
+${CE_RUN_PATH}/scripts/run-all-GAP.sh ${CE_RUN_PATH}/evaluate/self_test/self_test_gap ${OUT_PATH} ${PRED} ${NUM_THREADS}
+
+echo ""
+echo "Executing with TSVC Benchmarks..."
+${CE_RUN_PATH}/scripts/run-all-TSVC.sh ${CE_RUN_PATH}/evaluate/self_test/self_test_tsvc ${OUT_PATH} ${PRED} ${NUM_THREADS}
+echo ""
+echo "Parsing results to get score..."
+echo ""
+GAP_SCORE=$(python3 scripts/parse_and_score.py ${OUT_PATH}/gap_result.stat ${CE_RUN_PATH}/evaluate/self_test/self_test_gap.reftime 0 | cut -d' ' -f2)
+python3 scripts/parse_and_score.py ${OUT_PATH}/tsvc_result.stat ${CE_RUN_PATH}/evaluate/self_test/self_test_tsvc.reftime ${GAP_SCORE}
+
