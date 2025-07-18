@@ -1,4 +1,4 @@
-LLVM_INSTALL_PATH=../llvm/build/bin
+LLVM_INSTALL_PATH=$(PWD)/../llvm/build/bin
 CXX = $(LLVM_INSTALL_PATH)/clang++
 OPT = $(LLVM_INSTALL_PATH)/opt
 LLC = $(LLVM_INSTALL_PATH)/llc
