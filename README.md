@@ -9,38 +9,47 @@ Detailed submission rules are described in https://cechallenge.github.io/
 
 Please read and follow these instructions carefully.
 
-### 1. Fork this repository
 
-**Fork** this repository into your github account as a **private** repository.
+### 1. Clone repository
 
-Do **NOT directly clone** this repository.
-
-
-### 2. Clone your repository
-
-**Clone** your forked repository into your local server. 
+Clone this repository into your local server. 
 
 We haven't tested MacOS/Windows environment, so we highly recommend to use a Linux-based server.
 
 ```
-git clone https://github.com/[your_github_id]/2025
+git clone https://github.com/cechallenge/2025 [your-local-repo]
+```
+
+### 2. Set up your private repository
+
+First, make your own private repository on Github.
+
+Second, **change** the `origin` remote to **your private Github repository**.
+
+```
+cd [your-local-repo]
+git remote set-url origin https://github.com/[your-username]/[your-github-repo].git
 ```
 
 ### 3. Pull docker image
 
-(TO BE UPDATED)
-
+To locally test your artifact, pull the docker image first.
+```
+docker pull ghcr.io/cechallenge/ce_challenge_2025
+```
 
 ### 4. Run docker image
 
-(TO BE UPDATED)
-
+Run the docker.
+```
+docker run -it -v [your-local-repo]/[path-to-docker-repo] ghcr.io/cechallenge/ce_challenge_2025:latest
+```
 
 ### 5. Run build and test
 
 To run end-to-end build and test script, go to the repository and run the script in docker:
 ```
-cd [path_to_repo]
+cd [path-to-docker-repo]
 bash build_and_test.sh
 ```
 
