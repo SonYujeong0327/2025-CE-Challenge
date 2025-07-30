@@ -42,7 +42,7 @@ docker pull ghcr.io/cechallenge/ce_challenge_2025
 
 Run the docker.
 ```
-docker run -it -v [your-local-repo]/[path-to-docker-repo] ghcr.io/cechallenge/ce_challenge_2025:latest
+docker run -it -v [your-local-repo]:[path-to-docker-repo] ghcr.io/cechallenge/ce_challenge_2025:latest
 ```
 
 ### 5. Run build and test
