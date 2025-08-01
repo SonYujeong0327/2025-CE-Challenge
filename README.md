@@ -2,7 +2,7 @@
 
 The main objectives of Computer Engineering (CE) Challenge 2025 are to analyze and improve the branch prediction mechanism of the RISC-V architecture and to strengthen the vectorization capabilites of the LLVM compiler.
 
-Detailed submission rules are described in https://cechallenge.github.io/
+Detailed rules are described in https://cechallenge.github.io/
 
 
 ## Getting Started
@@ -30,6 +30,11 @@ Second, **change** the `origin` remote to **your private Github repository**.
 cd [your-local-repo]
 git remote set-url origin https://github.com/[your-username]/[your-github-repo].git
 ```
+
+
+Third, in your Github repository, add [@cechallenge](https://github.com/cechallenge) official Github account as a collaborator.
+
+Please follow the [instructions](https://cechallenge.github.io/submission/) to submit your artifacts to the leaderboard.
 
 ### 3. Pull docker image
 
