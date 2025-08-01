@@ -34,7 +34,7 @@ git remote set-url origin https://github.com/[your-username]/[your-github-repo].
 
 Third, in your Github repository, add [@cechallenge](https://github.com/cechallenge) official Github account as a collaborator.
 
-Please follow the [instructions](https://cechallenge.github.io/submission/) to submit your artifacts to the leaderboard.
+Please follow the [instructions](https://cechallenge.github.io/challenge/) to submit your artifacts to the leaderboard.
 
 ### 3. Pull docker image
 
